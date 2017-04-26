@@ -34,3 +34,15 @@ src/processengine/Activities/binuka_smoothflow_io_GetProfileInfo/binuka_smoothfl
 src/processengine/Activities/binuka_smoothflow_io_MakePayment/binuka_smoothflow_io_MakePayment.go
 settings.config
 src/processengine/Activities/binuka_smoothflow_io_CurrencyConverter/binuka_smoothflow_io_CurrencyConverter.go
+src/github.com
+src/golang.org
+src/9fans.net
+src/bitbucket.org
+src/code.google.com
+src/duov5.com
+src/git.apache.org
+src/google.golang.org
+src/gopkg.in
+src/sourcegraph.com
+src/speter.net
+src/test
