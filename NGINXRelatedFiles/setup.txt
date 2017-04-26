@@ -1,0 +1,13 @@
+
+#######Run starting script on microservice initiation###########################
+
+
+//./runner <IP of Consul and Nodejs ngonxProxyMaker> < i)Docker image repositery name|| ii)if multiple ports are open, Docker image repositery name-port> <unique port for nginx proxy> <unique name>
+
+./runner 10.240.0.6 auth 81 authproxy
+
+./runner 10.240.0.6 ceb-3500 82 cebproxy
+
+
+
+

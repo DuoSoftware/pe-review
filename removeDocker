@@ -1,0 +1,25 @@
+#!/bin/bash
+#$1=docker name need to be delete 
+
+idarray=($(docker ps | awk '{ print $1 }'))
+namearray=($(docker ps | awk '{ print $2 }'))
+indexid=0
+indexname=0
+#indexofidneedtodelete
+
+
+
+for i in "${namearray[@]}"
+	do
+		indexname=$(($indexname + 1))
+		 if [ "$1" == "${namearray[$indexname]}" ]; then 
+		 	echo "container found "
+		 	indexofidneedtodelete=$indexname
+		 else
+		 	echo "container not found "
+		 fi
+done
+docker stop ${idarray[$indexofidneedtodelete]}
+docker rm ${idarray[$indexofidneedtodelete]} 
+docker rmi ${idarray[$indexofidneedtodelete]}
+docker rmi $1

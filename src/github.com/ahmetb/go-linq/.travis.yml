@@ -1,0 +1,8 @@
+language: go
+go: go1.2
+script: go test -v -cover  ./...
+install:
+  - export PATH=$PATH:$HOME/gopath/bin
+  - go get -v code.google.com/p/go.tools/cmd/cover
+  - go get -t github.com/smartystreets/goconvey
+  - go get github.com/jacobsa/oglematchers

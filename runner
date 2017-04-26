@@ -1,0 +1,8 @@
+#!/bin/bash
+sudo su
+cd /var/www/html/engine/NGINXRelatedFiles/
+docker build -t $4 .;
+#curl http://$1:4500/addtonginxplus/$2/$3/10.240.0.2
+curl -H "Content-Type: application/json" -X POST -d '{"process": "'$2'","port": "'$3'","ip": "10.240.0.3","securityToken": "df619f0e3deab198b55fc269ba0bf17d","userName": "shehan.dev.smoothflow.io"}' http://$1:4500/addtonginxplus
+docker run -d --name=$2 -e "CONSUL_URL="$1":8500" -e "SERVICE="$2 -e "PORT="$3 -p $3:$3 $4
+#curl http://$1:4500/removefromnginxplus/$2
